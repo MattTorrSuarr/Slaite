@@ -1,25 +1,18 @@
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
 import Link from "next/link";
-import { StickyNote, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import Image from "next/image";
 import logo from "./logo8.png";
 import sl from "./sl logo.png";
-import cvp from "./cv prev.png"
-
-import cv from "./tmcv.png";
-import { TextHoverEffect } from "@/app/aceternityUI/text-hover-effect";
+import cvp from "./cv prev.png";
 import { Highlight } from "@/app/aceternityUI/hero-highlight";
-import { Spotlight } from "@/app/aceternityUI/spotlight-new";
 import { WobbleCard } from "@/app/aceternityUI/wobble-card";
-const user = {
-  age: 16,
-};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="border-b  flex bg-[#030303] h-[100px] w-full items-center relative z-20">
+      <header className="border-b flex bg-[#030303] h-[100px] w-full items-center relative z-20">
         <div className="flex items-center">
           <Image
             className="m-[10px]"
@@ -48,9 +41,7 @@ export default function Home() {
           <SignedIn>
             <UserButton
               appearance={{
-                elements: {
-                  userButtonAvatarBox: "w-10 h-10",
-                },
+                elements: { userButtonAvatarBox: "w-10 h-10" },
               }}
             />
           </SignedIn>
@@ -62,7 +53,7 @@ export default function Home() {
           20% off all credits <ChevronRight height={15} width={15} className="ml-[10px] rounded" />
         </p>
         <h5 className="font-semibold">
-          Make <Highlight className="">resumes</Highlight> that land jobs for free
+          Make <Highlight>resumes</Highlight> that land jobs for free
         </h5>
         <p className="font-medium text-[25px] mr-auto ml-auto max-w-[800px] font-light">
           Slaite functions on a credit based system. Each CV costs x amount of credits depending on characteristics amount etc. But generally speaking for the average user they will never find the need to spend.
@@ -70,21 +61,23 @@ export default function Home() {
       </div>
 
       <div className="text-center space-x-[20px] mt-[40px] font-bold">
-        <Link href="/dashboard"><button className="w-[200px] h-[70px] bg-[white] text-black font-semibold rounded-[20px]">Create cv</button></Link>
-         <Link href="/dashboard"><button className="w-[200px] h-[70px] text-white font-medium rounded-[20px] font-semibold border">Edit cv</button></Link>
+        <Link href="/dashboard">
+          <button className="w-[200px] h-[70px] bg-[white] text-black font-semibold rounded-[20px]">
+            Create CV
+          </button>
+        </Link>
+        <Link href="/dashboard">
+          <button className="w-[200px] h-[70px] text-white font-medium rounded-[20px] border font-semibold">
+            Edit CV
+          </button>
+        </Link>
       </div>
 
       <div className="flex justify-center items-center mt-[30px]">
-  <div className="relative w-[1000px] h-[1000px] bg-[#131313] border rounded-lg overflow-hidden">
-    <Image
-      src={cvp}
-      alt="CV Preview"
-      fill
-      style={{ objectFit: "contain" }}
-    />
-  </div>
-</div>
-
+        <div className="relative w-[1000px] h-[1000px] bg-[#131313] border rounded-lg overflow-hidden">
+          <Image src={cvp} alt="CV Preview" fill style={{ objectFit: "contain" }} />
+        </div>
+      </div>
 
       <div className="text-center text-[60px] font-medium mt-[80px]">
         <h6>Backed by reputable companies</h6>
@@ -93,15 +86,14 @@ export default function Home() {
         </p>
       </div>
 
-     
       <div className="wobble grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto w-full mt-[100px]">
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-black">
           <div className="max-w-sm">
             <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Create Your CV Instantly
+              Create Your CV Instantly
             </h2>
             <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-             Craft a professional, modern CV in seconds. Our AI-powered generator helps you design resumes that stand out — no design skills needed.
+              Craft a professional, modern CV in seconds. Our AI-powered generator helps you design resumes that stand out — no design skills needed.
             </p>
           </div>
         </WobbleCard>
@@ -109,31 +101,29 @@ export default function Home() {
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-black">
           <div className="max-w-sm">
             <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-Edit and Update Effortlessly            </h2>
+              Edit and Update Effortlessly
+            </h2>
             <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-Make quick edits anytime. Update your experience, skills, or design in real-time and keep your CV always ready for new opportunities.            </p>
+              Make quick edits anytime. Update your experience, skills, or design in real-time and keep your CV always ready for new opportunities.
+            </p>
           </div>
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 lg:col-start-2 min-h-[300px] bg-black">
           <div className="max-w-sm">
             <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-Share and Download Easily            </h2>
+              Share and Download Easily
+            </h2>
             <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-Export your CV in one click or share it online with a custom link. Perfect for students, professionals, and entrepreneurs who move fast.            </p>
+              Export your CV in one click or share it online with a custom link. Perfect for students, professionals, and entrepreneurs who move fast.
+            </p>
           </div>
         </WobbleCard>
       </div>
 
       <div className="footer w-full h-[100px] border-t-2 mt-[100px] flex items-center justify-between px-4 bg-[#030303]">
         <div className="flex items-center">
-          <Image
-            className="m-[10px]"
-            src={logo}
-            alt="Slaite Logo"
-            width={60}
-            height={60}
-          />
+          <Image className="m-[10px]" src={logo} alt="Slaite Logo" width={60} height={60} />
           <h1 className="font-bold text-[35px] text-white">Slaite</h1>
         </div>
         <a
@@ -142,7 +132,7 @@ Export your CV in one click or share it online with a custom link. Perfect for s
           rel="noreferrer noopener"
           aria-label="Powered by Vercel"
         >
-          <img
+          <Image
             className="border"
             src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
             alt="Powered by Vercel"

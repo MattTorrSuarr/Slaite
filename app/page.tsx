@@ -1,5 +1,4 @@
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import { ThemeProvider } from "next-themes";
+import {  SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ChevronRight } from 'lucide-react';
 import Image from "next/image";

@@ -12,7 +12,6 @@ import { PersonalInfoForm } from "@/components/forms/personal-info-form"
 import { ExperienceForm } from "@/components/forms/experience-form"
 import { EducationForm } from "@/components/forms/education-form"
 import { SkillsForm } from "@/components/forms/skills-form"
-import { FileText } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 
 export function AppSidebar() {

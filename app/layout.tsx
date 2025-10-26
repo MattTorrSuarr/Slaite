@@ -3,14 +3,8 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+
 } from "@clerk/nextjs";
-import Image from "next/image";
-import logo from "./logo8.png"; // Adjust path to your logo
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
